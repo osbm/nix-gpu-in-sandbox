@@ -12,7 +12,7 @@
     };
   in
   {
-    packages.x86_64-linux.nvidia-smi = pkgs.stdenv.mkDerivation {
+    packages.x86_64-linux.nvidia-smi = pkgs.stdenvNoCC.mkDerivation {
       name = "nvidia-smi-runner";
       version = "0.0.0";
 
