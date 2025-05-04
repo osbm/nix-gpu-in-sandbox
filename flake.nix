@@ -21,13 +21,8 @@
 
       cudaSupport = true;
       requiredSystemFeatures = [ "cuda" ];
-      env = let
-        libs = [
-          pkgs.linuxPackages.nvidia_x11_beta
-        ];
-      in
-      {
-        LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath libs}";
+      env = {
+        LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [ pkgs.linuxPackages.nvidia_x11_beta ]}";
       };
       nativeBuildInputs = [
         (pkgs.python312.withPackages (
