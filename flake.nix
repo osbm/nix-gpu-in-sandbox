@@ -34,7 +34,6 @@
       in
       {
         LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath libs}";
-        CUDA_PATH = "${ pkgs.cudatoolkit}";
       };
       nativeBuildInputs = [
         (pkgs.python312.withPackages (
