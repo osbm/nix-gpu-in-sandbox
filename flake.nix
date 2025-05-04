@@ -23,13 +23,7 @@
       requiredSystemFeatures = [ "cuda" ];
       env = let
         libs = [
-          pkgs.stdenv.cc.cc.lib
-          pkgs.xorg.libX11
-          pkgs.ncurses5
           pkgs.linuxPackages.nvidia_x11_beta
-          pkgs.libGL
-          pkgs.libzip
-          pkgs.glib
         ];
       in
       {
